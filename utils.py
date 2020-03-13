@@ -49,12 +49,13 @@ def iteration_jeu(Z):
                 Z[x][y] = 1 
     return Z
 
-
+## fonction d'affichage de 10 premières itérations 
+## quand on initialise avec la matrice M
 def mat_show(M):
     #création de la figure 
     fig=plt.figure(figsize=(10, 10))
-    for i in range (1,11):
-        fig.add_subplot(2, 5, i)
+    for i in range (10):
+        fig.add_subplot(2, 5, i+1)
         plt.axis('off')
         plt.title('Itération '+ str(i))
         plt.imshow(M, origin = 'upper', interpolation="nearest")
